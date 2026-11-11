@@ -1,0 +1,17 @@
+import random #impoort random function
+choices=["rock","paper","scissors"] #initialise a list
+computer=random.choice(choices) #select a random choice
+player=input("Choose Rock,Paper or Scissors: ").lower() #prompt the user to select an option
+print("Computer chose: ",computer)# print the computer's choice
+if player==computer: #compare whether the choice taken by player & computer is same
+  print("It's a tie!") #if yes, print it is a tie
+elif player=="rock" and computer=="scissors": #compare the choice taken by player and computer
+  print("YOU WIN!") #print result based on the comparison
+elif player=="scissors" and computer=="paper":
+  print("YOU WIN")
+elif player=="paper" and computer=="rock":
+  print("YOU WIN!")
+elif player in choices:#if no conditions given above satisfy
+  print("COMPUTER WINS!")#change the result 
+else:
+  print("Invalid choice")#if none of the comparisons satisfy print invalid
